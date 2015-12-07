@@ -1,0 +1,18 @@
+<div ng-controller="newAnswerController">
+    <div class="container">
+        <h1 ng-bind="question.question"></h1>
+        <h5 ng-bind="question.desciption"></h5>
+        <div class="form-group">
+            <label>Your Answer</label>
+            <textarea ng-model="answer" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Supporting details for your answer (optional)</label>
+            <textarea ng-model="details" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <a href="#/" class="form-control btn btn-danger">Cancel</a>
+            <button ng-click="submit()" class="btn btn-success">Submit</button>
+        </div>
+    </div>
+</div>

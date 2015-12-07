@@ -1,0 +1,18 @@
+<div ng-controller='questionController'>
+    <div class="container">
+        <h1 ng-bind="question.question"></h1>
+        <h5 ng-bind="question.description"></h5>
+        <div class="container" style="border: solid 1px black; padding: 30px;" ng-repeat="answer in question.answers | orderBy: '-likes'">
+            <div class="row">
+                <div class="pull-left">
+                    <h6>--<span ng-bind="answer.user"></span></h6>
+                    <p><strong ng-bind="answer.answer"></strong></p>
+                    <p ng-bind="answer.details"></p>
+                </div>
+                <div class="pull-right">
+                    <p><span ng-bind="answer.likes + ' likes'"></span></p><button ng-click="like(answer._id)" class="btn btn-success">Like!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div ng-controller="newQuestionController">
+    <div class="container">
+        <h1>New Question</h1>
+        <div class="form-group">
+            <label>Question</label>
+            <textarea ng-model="question" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Description (optional)</label>
+            <textarea ng-model="description" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <a href="#/" class="form-control btn btn-danger">Cancel</a>
+            <button ng-click="submit()" class="btn btn-success">Submit</button>
+        </div>
+    </div>
+</div>
